@@ -1,0 +1,972 @@
+@import url('https://fonts.googleapis.com/css2?family=Marko+One&family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
+
+*,
+*::before,
+*::after { 
+    box-sizing: border-box;
+}
+
+/* Home Body styled to center all it's elemnts */
+
+.home-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    
+    flex-direction: column;
+    color: #000;
+    margin: 0;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HTML element styles */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+    color: #fff;
+    width: 900px;
+    font-size: 20px;
+    font-family: inherit;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+nav h1 {
+    padding-left: 1rem;
+    font-size: 2rem;
+}
+
+nav a {
+    color: #fff;
+}
+
+nav a:hover {
+    color: rgb(247, 159, 159);
+}
+
+header {
+    padding: 3rem;
+    position: relative;
+    z-index: 2;
+    background-blend-mode: multiply;
+    background-image: url('../images/ladies-shopping.jpg'), radial-gradient(#444, rgb(43, 41, 41));
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+a {
+    padding: 1rem;
+    color: #000;
+    text-decoration: none;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+footer h2 {
+    /* text-align: center; */
+    margin-bottom: 2rem;
+    padding-left: 7rem;
+}
+
+/* Home Page Classes Styles */
+
+.links {
+    padding-top: 0.5rem;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 8rem;
+    position: absolute;
+    z-index: 3;
+    color: white;
+    width: 90%;
+    
+}
+
+.hero h2 {
+    font-size: clamp(1.3rem, 3vw + 0.5rem, 2rem);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5px;
+    background-color: var(--clr-accent, rgb(151, 46, 46));
+    color: var(--clr-text, #fff);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    width: 30%;
+}
+
+.btn:hover, btn:focus {
+    background-color: rgb(148, 32, 32);
+    color: white;
+    opacity: .8;
+    transition: 
+    transform 250ms ease-in-out, 
+    opacity 250ms linear;
+    transform: scale(1.1);
+}
+
+.container {
+    width: 85%;
+    max-width: 65em;
+    margin: 0 auto;
+    padding: 1rem ;
+    
+}
+
+
+
+.split {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 12rem;
+}
+
+.split img {
+    height: 140px;
+}
+
+.split > * {
+    flex-basis: 30%;
+    min-width: 15em;
+}
+
+
+.section-title {
+    text-align: center;
+    font-size: clamp(2rem, 3vw + 0.5rem, 3rem);
+    line-height: 1.1;
+    color: #17353d;
+    margin-bottom: 6rem;
+}
+
+/* Home Page Footer Styles */
+
+.home-footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 4rem;
+    border-top: 1px solid black;
+    height: 50vh;
+
+    margin-left: 7rem;
+    margin-right: 7rem;
+    padding-top: 4rem;
+}
+
+.offers h1 {
+    padding-left: 1rem;
+}
+
+.offers p {
+    /* display: grid;
+    grid-template-columns: 1fr; */
+    padding: 0.5rem 0;
+    
+}
+.offers a:hover {
+    color: blue;
+}
+
+.find-us-on a {
+    padding: 1rem 1rem 1rem 0;
+    font-size: 2rem;
+}
+
+.find-us-on a:hover {
+    color: blue;
+}
+/* Home Page Media Queries */
+
+
+@media (max-width: 768px) {
+    
+    .home-body {
+    display: flex;
+    background-color: rgb(243, 243, 243);
+    
+    flex-direction: column;
+    
+    color: #000;
+    max-width: 100%;
+    margin: 0;
+    line-height: 1;
+    font-family: 'Poppins', sans-serif;
+    
+    }
+
+    header {
+        padding: 0em;
+        position: relative;
+        z-index: 2;
+        background-blend-mode: multiply;
+        background-image: url('/images/ladies-shopping.jpg'), radial-gradient(#444, rgb(43, 41, 41));
+        background-attachment: fixed;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 90vh;
+
+    
+        
+    }
+
+    nav {
+    display: inline-block;
+    margin-top: 1rem;
+    padding-left: 2rem;
+    color: #fff;
+    width: 90%;
+    font-size: 12px;
+    line-height: 1.6;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    transform: unset;
+    
+    }
+
+    nav a{
+        display: none;
+    }
+
+    nav h4 {
+        font-size: 2rem;
+        padding-left: 1rem;
+       
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+
+    .hero {
+        display: flex;
+        
+        flex-direction: column;
+        margin-top: 4rem;
+        position: absolute;
+        z-index: 3;
+        color: white;
+        width: 80%;
+        padding: 1rem;
+        line-height: 1.4;
+        padding-left: 3rem;
+        left: 0;
+        transform: translate(4.5%);
+    }
+    
+    .hero h2 {
+        font-size: clamp(1.3rem, 3vw + 0.5rem, 2rem);
+        line-height: 1.4;
+        margin-bottom: 1rem;
+        margin-top: 4rem;
+        overflow: hidden;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 2rem;
+        border-radius: 5px;
+        background-color: var(--clr-accent, rgb(151, 46, 46));
+        color: var(--clr-text, #fff);
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 14px;
+        
+        text-align: center;
+        width: 50%;
+    }
+
+}
+
+
+@media(max-width: 1024px) {
+    .hero {
+        padding-left: 1.5rem;
+    }
+}
+
+
+/* Home Page Categories Section Styles */
+.featured {
+    /* background-color: #eee; */
+    padding: 0 auto;
+    justify-content: center;
+    height: 75vh;
+}
+
+.featured-item {
+    display: block;
+    position: relative;
+    transform: scale(.85);
+    transition: transform 250ms ease-in-out;
+    color: #000;
+    text-align: center;
+}
+
+.featured-item:hover,
+.featured-item:focus {
+    transform: scale(1);
+}
+
+.featured .featured-details {
+    opacity: 0;
+    display: block;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.featured-details {
+    text-align: start;
+}
+
+.featured-item:hover .featured-details,
+.featured-item:focus .featured-details {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 250ms linear;
+}
+
+.featured-item img {
+    max-width: 75%;
+    margin-bottom: 2rem;
+
+}
+
+/*Home Page Our Products Secton Styles */
+
+.product {
+    background: radial-gradient(var(--clr-inner, red), var(--clr-outer, yellow));
+    padding: 3rem;
+    border-radius: 5px;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.product-title {
+    font-size: clamp(3rem, 5vw + 1rem, 5.4rem);
+    color: #fff;
+    line-height: 1.1;
+    text-transform: uppercase;
+    text-shadow: 0 0 .2em rgba(0, 0, 0, .2);
+    margin-bottom: 1rem;
+}
+
+.product-btn {
+    display: inline-block;
+    background-color: var(--clr-accent, blue);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.product-btn:hover {
+    background-color: var(--clr-accent, blue);
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: 250ms ease-in-out;
+}
+
+.product-one {
+    --clr-accent: #a1173c;
+    --clr-inner: #faa700;
+    --clr-outer: #e48d00;
+}
+
+.product-two {
+    --clr-accent: #2f4858 ;
+    --clr-inner: #eac886;
+    --clr-outer: #fce4d3;
+}
+
+.product-three {
+    --clr-accent: #008951;
+    --clr-inner: #6dd5ed ;
+    --clr-outer: #2193b0;
+}
+
+.product-image {
+    margin-top: -5rem;
+    transform: rotate(-30deg);
+    margin-bottom: 3rem;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3rem auto;
+    font-size: 2rem;
+   
+}
+
+.social-media h2 {
+    padding-bottom: 2rem;
+}
+
+.social-media a:hover {
+    color: blue;
+}
+@media(min-width: 45em) {
+    .product-image {
+        float: right;
+        width: 65%;
+        shape-outside: url('images/airforce.png');
+        shape-margin: 1rem;
+        margin: 0 -5rem 0 0;
+    }
+
+    .product {
+        text-align: left;
+        margin-bottom: 9rem;
+    }
+
+    .product-title{
+        margin: 0;
+    }
+
+    .product.product-two .product-image {
+        float: left;
+        shape-outside: url('images/airforce.png');
+        margin: 0 0 0 -5rem;
+        shape-margin: 2rem;
+    }
+
+    .product.product-two {
+        text-align: right;
+    }
+
+    
+}
+
+
+/*Home Page Customer Review Section Styles */
+
+.customer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
+    color: white;
+    height: 60vh;
+    width: 1000px;
+    border-radius: 5px;
+    padding: 4rem 0;
+    
+}
+
+.customer h1 {
+    margin-left: 9.7rem;
+    font-size: clamp(1.2rem, 5vw + 1rem, 2.2rem);
+    line-height: 1.1;
+}
+
+.customer-info {
+    
+    display: flex;
+    margin-left: 2.7rem; 
+}
+
+.customer-info img {
+    border-radius: 75%;
+    height: 80px;
+    width: 80px;
+    
+}
+
+.customer-info p, strong {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    
+}
+
+@media(max-width: 720px) {
+    .customer-info {
+        display: flex;
+        margin-left: 2rem;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        line-height: 1.3;
+        
+    }
+
+    .customer img {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* Products Page Styles */
+
+.products-body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.products-header {
+    padding: 3rem;
+    position: relative;
+    z-index: 2;
+    background-blend-mode: multiply;
+    background-image: url('/images/ladies.jpg'), radial-gradient(#444, rgb(43, 41, 41));
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.products-section-title{
+    background-color: #eee;
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+}
+
+.products-section-title h1 {
+    
+    text-align: center;
+    font-size: clamp(2rem, 3vw + 0.5rem, 3rem);
+    line-height: 1.1;
+    color: #17353d;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.products-section-title p {
+    text-align: center;
+    font-size: clamp(1rem, 5vw + 1rem, 1.7rem);
+    line-height: 1.1;
+    color: #17353d;
+    margin: 1.5rem 0;
+    
+}
+
+.products-align{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /* padding: 0 9rem; */
+    /* border: 1px solid green; */
+    margin: 0 12rem;
+    height: 90vh;
+}
+
+.hero h2 {
+    padding-top: 5rem;
+}
+
+.card {
+    border: .5px solid var(--clr-accent, #2f4858) ;
+    border-radius: 5px;
+    
+}
+
+.card:hover {
+    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    transition: 150ms ease-in-out;
+}
+
+.card-header img {
+    height: 200px;
+    width: 100%;
+    padding: 1rem;
+}
+
+.card-body {
+    font-size: 1.2rem;
+    font-weight: 200;
+    line-height: 1.2;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    
+}
+
+/* .card-body p {
+    font-weight: bold;
+    font-size: 1.5rem;
+} */
+
+.section-type {
+    text-align: center;
+    font-size: 2rem;
+    color: #17353d;
+}
+
+.items-section {
+    padding-top: 0;
+    padding-bottom: 2rem;
+}
+
+.add-btn {
+    cursor: pointer;
+    display: inline-block;
+    background-color: var(--clr-accent, blue);
+    border-radius: 5px;
+    color: white;
+    margin-top: 1rem;
+    
+}
+
+.add-btn:hover {
+    background-color: var(--clr-accent, blue);
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: 250ms ease-in-out;
+}
+
+.product-accent-shoe {
+    --clr-accent: #a1173c;
+}
+
+.product-accent-clothes {
+    --clr-accent: #008951;
+}
+
+.product-accent-bag {
+    --clr-accent: #2f4858;
+}
+
+.statistics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    /* gap: 4rem; */
+    padding: 4rem 0rem;
+    background-color: #eee;
+    padding-left: 6rem;
+    /* margin: 0 auto;
+    width: 1000px; */
+}
+
+.statistics h3 {
+    font-size: 5rem;
+    margin-right: 12rem;
+}
+
+.statistics p {
+    font-size: 1.5rem;
+  
+}
+
+
+/* Basket Page Styles */
+
+.basket-body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.basket-header {
+    padding: 3rem;
+    position: relative;
+    z-index: 2;
+    background-blend-mode: multiply;
+    background-image: url('/images/visa.jpg'), radial-gradient(#444, rgb(43, 41, 41));
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.basket-items {
+    display: flex;
+    gap: 4rem;
+    justify-content: start;
+    align-items: center;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    border: 1px solid rgb(155, 154, 154);
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    width: 600px;
+    
+}
+
+.item-in-basket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    padding-right: 5rem;
+}
+
+.price-strong{
+    padding-left: 1.5rem;
+    
+}
+
+
+.basket-items img {
+    align-items: flex-start;
+    margin: 1rem 0;
+    height: 100px;
+    width: 90px;
+    border-radius: 5px;
+}
+
+.basket-items input {
+    width: 50px;
+}
+
+.basket-items h2 {
+    font-size: 1rem;
+}
+
+.remove-btn {
+    background-color: rgb(177, 0, 0);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    opacity: .9;
+    transform: scale(1.1);
+    transition: 150ms ease-in-out;
+}
+
+.item-info {
+    max-width: 100px;
+}
+
+.total-cost {
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.total-cost h2 {
+    font-weight: 400;
+}
+
+.total-cost span {
+    font-weight: 600;
+}
+
+.total-cost a {
+    display: inline-block;
+    background-color: rgb(21, 21, 252);
+    border-radius: 5px;
+    color: white;
+    margin-top: 1.5rem;
+}
+
+.total-cost a:hover {
+    opacity: .9;
+    transform: scale(1.1);
+    transition: 150ms ease-in-out;
+}
+
+/* Contact Page Styles */
+
+.contact-body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-header {
+    padding: 3rem;
+    position: relative;
+    z-index: 2;
+    background-blend-mode: multiply;
+    background-image: url('/images/contact_me.jpg'), radial-gradient(#444, rgb(43, 41, 41));
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.contact-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 8rem;
+    position: absolute;
+    z-index: 3;
+    
+    color: rgb(247, 159, 159);
+    line-height: 1.6;
+    
+}
+
+.contact-hero h2 {
+    text-align: center;
+    font-size: clamp(1rem, 3vw + 0.5rem, 1.5rem);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    width: 60%;
+    color: white;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    width: 900px;
+}
+
+.contact-image {
+    height: 250px;
+    margin-left: 5rem;
+}
+
+.lets-talk {
+    display: flex;
+    flex-direction: column;
+}
+
+.lets-talk h1 {
+    font-size: clamp(1rem, 5vw + 1rem, 2rem);
+    padding-left: 1rem;
+}
+
+.lets-talk a {
+    color: white;
+}
+
+.lets-talk a:hover {
+    color: rgb(247, 159, 159);
+    text-decoration: underline;
+}
+
+.lets-talk span {
+    color: white;
+}
+/* .lets-talk span:hover {
+    color: white;
+} */
+
+
+/* Modal Styles */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(177, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #eee;
+    color: black;
+    width: 100%;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
